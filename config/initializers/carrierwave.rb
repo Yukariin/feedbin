@@ -1,4 +1,9 @@
 if ENV["AWS_ACCESS_KEY_ID"] && ENV["AWS_SECRET_ACCESS_KEY"]
+  Rails.logger.info "CarrierWave: AWS Keys FOUND. Configuring S3/Fog storage."
+  Rails.logger.info "CarrierWave: Bucket is #{ENV['AWS_S3_BUCKET']}"
+  Rails.logger.info "CarrierWave: Endpoint is #{ENV['AWS_S3_ENDPOINT']}"
+  Rails.logger.info "CarrierWave: Path style is #{ENV['AWS_S3_PATH_STYLE']}"
+
   CarrierWave.configure do |config|
     options = {
       provider:              "AWS",
