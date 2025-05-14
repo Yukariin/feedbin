@@ -9,7 +9,9 @@ if ENV["AWS_ACCESS_KEY_ID"] && ENV["AWS_SECRET_ACCESS_KEY"]
     options[:host]       = ENV["AWS_S3_HOST"]       if ENV["AWS_S3_HOST"]
     options[:endpoint]   = ENV["AWS_S3_ENDPOINT"]   if ENV["AWS_S3_ENDPOINT"]
     options[:path_style] = ENV["AWS_S3_PATH_STYLE"] if ENV["AWS_S3_PATH_STYLE"]
+    config.fog_provider = 'fog/aws' 
     config.fog_credentials = options
     config.fog_directory = ENV["AWS_S3_BUCKET"]
+    config.storage = :fog
   end
 end
