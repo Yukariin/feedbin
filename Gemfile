@@ -5,7 +5,6 @@ gem "rails", "7.2.2.1"
 gem "will_paginate"
 
 gem "http",                github: "feedbin/http",                branch: "feedbin"
-gem "carrierwave",         github: "feedbin/carrierwave",         branch: "feedbin"
 gem "sax-machine",         github: "feedbin/sax-machine",         branch: "feedbin"
 gem "feedjira",            github: "feedbin/feedjira",            branch: "f2"
 gem "feedkit",             github: "feedbin/feedkit",             branch: "master"
@@ -27,7 +26,8 @@ gem "connection_pool"
 gem "dotenv-rails", "= 2.8.1"
 gem "down"
 gem "evernote_oauth"
-gem "fog-aws"
+gem 'carrierwave'
+gem 'fog-aws'
 gem "honeybadger"
 gem "htmlentities"
 gem "httparty"
