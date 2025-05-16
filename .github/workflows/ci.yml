@@ -156,4 +156,4 @@ jobs:
           # platforms: linux/amd64,linux/arm64
           build-args: |
             RUBY_VERSION=3.4.1
-            NODE_VERSION=18
+            NODE_VERSION=18.12.0
