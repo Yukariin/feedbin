@@ -122,6 +122,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
+      - name: Set up QEMU (for multi-platform builds, optional but good practice)
+        uses: docker/setup-qemu-action@v3
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       
